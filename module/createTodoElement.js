@@ -63,15 +63,15 @@ export const createTodoElement = (item) => {
         <div class="btnsContainer">
           <div class='importantContainer'>
             <button class="fullStarBtn">
-              <img src='src/filledStar.svg' />
+              <img src='public/assets/imgs/filledStar.svg' />
             </button>
             <button class="emptyStarBtn">
-              <img src="src/emptyStar.svg">   
+              <img src="public/assets/imgs/emptyStar.svg">   
             </button>
           </div>
           <div class="removeContainer">
             <button class="removeBtn">
-              <img src="src/trash.svg" />
+              <img src="public/assets/imgs/trash.svg" />
             </button>
           </div>
         </div>
