@@ -13,7 +13,8 @@ const init = () => {
   });
   $form.addEventListener('submit', addListItem);
   LIST_CONTAINER.addEventListener('click', toggleListItem);
-  LIST_CONTAINER.addEventListener('click', editInputContent)
+  LIST_CONTAINER.addEventListener('click', editInputContent);
+  LIST_CONTAINER.addEventListener('keydown', editInputContent);
 };
 
 init();

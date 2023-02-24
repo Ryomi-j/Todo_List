@@ -11,4 +11,10 @@ export const editInputContent = (e) => {
     $editInput.value = '';
     $editInput.value = value;
   }
+
+  if (e.keyCode === 27) {
+    $label.style.display = 'block';
+    $editInput.style.display = 'none';
+    $editInput.value = $label.innerText;
+  }
 };
