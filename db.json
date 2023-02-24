@@ -1,0 +1,22 @@
+{
+  "lists": [
+    {
+      "content": "테스트 1",
+      "completed": false,
+      "id": 1,
+      "marker": false
+    },
+    {
+      "content": "테스트2",
+      "completed": false,
+      "id": 3,
+      "marker": false
+    },
+    {
+      "content": "테스트 3",
+      "completed": false,
+      "id": 3,
+      "marker": false
+    }
+  ]
+}
