@@ -1,53 +1,80 @@
-import { appendChildrenList, getDOM, makeDOM } from '../utils/dom';
+import { makeDOM } from '../utils/dom.js';
 
-const makeItemDom = ({ content, isDone }) => {
-  // input list item DOM
-  const todoInputContainer = makeDOM('div', {
-    className: 'todoInputContainer',
-  });
+// const makeItemDom = ({ content, completed }) => {
 
-  const todoCheckBox = makeDOM('input', {
-    type: 'checkbox',
-    className: 'isDone',
-  });
-  todoCheckBox.setAttribute(`${isDone}`, '');
+//   // input list item DOM
+//   const todoInputContainer = makeDOM('div', {
+//     className: 'todoInputContainer',
+//   });
 
-  const todoInputLabel = makeDOM('label');
-  todoInputLabel.innerHTML = `${content}`;
+//   const todoCheckBox = makeDOM('input', {
+//     type: 'checkbox',
+//     className: 'isDone',
+//   });
+//   todoCheckBox.setAttribute(`${isDone}`, '');
 
-  const todoInputElement = makeDOM('input', {
-    type: 'text',
-    value: `${content}`,
-  });
+//   const todoInputLabel = makeDOM('label', {});
+//   todoInputLabel.innerHTML = `${content}`;
 
-  const todoItemContainer = appendChildrenList(todoInputContainer, [todoCheckBox, todoInputLabel, todoInputElement]);
+//   const todoInputElement = makeDOM('input', {
+//     type: 'text',
+//     value: `${content}`,
+//   });
 
-  // btns DOM
-  const btnsContainer = makeDOM('div', { className: 'btnsContainer' });
+//   appendChildrenList(todoInputContainer, [todoCheckBox, todoInputLabel, todoInputElement]);
 
-  const StarsContainer = makeDOM('button', { className: 'StarBtn' });
-  const fullStarIcon = makeDOM('i', { className: 'fa-solid fa-star fullStar' });
-  const emptyStarIcon = makeDOM('i', { className: 'fa-light fa-star emptyStar' });
-  const starBtn = appendChildrenList(StarsContainer, [fullStarIcon, emptyStarIcon]);
+//   // btns DOM
+//   const btnsContainer = makeDOM('div', { className: 'btnsContainer' });
 
-  const removeContainer = makeDOM('button', { className: 'removeContainer' });
-  const trashIcon = makeDOM('i', { className: 'fa-regular fa-trash-can trashIcon' });
-  const removeBtn = appendChildrenList(removeContainer, { trashIcon });
+//   const StarsContainer = makeDOM('button', { className: 'StarBtn' });
+//   const fullStarIcon = makeDOM('i', { className: 'fa-solid fa-star fullStar' });
+//   const emptyStarIcon = makeDOM('i', { className: 'fa-light fa-star emptyStar' });
+//   appendChildrenList(StarsContainer, [fullStarIcon, emptyStarIcon]);
 
-  const btns = appendChildrenList(btnsContainer, [starBtn, removeBtn]);
+//   const removeContainer = makeDOM('button', { className: 'removeContainer' });
+//   const trashIcon = makeDOM('i', { className: 'fa-regular fa-trash-can trashIcon' });
+//   appendChildrenList(removeContainer, [trashIcon]);
 
-  const todo_items = getDOM(todo_items);
-  appendChildrenList(todo_items, [todoItemContainer, btns]);
+//   appendChildrenList(btnsContainer, [StarsContainer, removeContainer]);
 
-  return todo_items;
-};
+//   appendChildrenList(LIST_CONTAINER, [todoInputContainer, btnsContainer]);
+
+//   return LIST_CONTAINER;
+// };
 
 export const createTodoElement = (item) => {
   const { id, content, completed, marker } = item;
+  const isDone = completed ? 'checked' : '';
+  const isImportant = marker ? 'active' : '';
   const $listItem = makeDOM('div', {
     className: 'item',
   });
-  const isDone = completed ? 'checked' : '';
   $listItem.dataset.id = id;
-  $listItem.innerHTML = makeItemDom();
+  $listItem.innerHTML = `
+        <div class="todoContainer">
+          <input
+            type="checkbox"
+            class='todo_checkbox' 
+            ${isDone}
+          />
+          <label>${content}</label>
+          <input type="text" value="${content}" class='todoInput'/>
+        </div>
+        <div class="btnsContainer">
+          <div class='importantContainer'>
+            <button class="fullStarBtn">
+              <img src='src/filledStar.svg' />
+            </button>
+            <button class="emptyStarBtn">
+              <img src="src/emptyStar.svg">   
+            </button>
+          </div>
+          <div class="removeContainer">
+            <button class="removeBtn">
+              <img src="src/trash.svg" />
+            </button>
+          </div>
+        </div>
+  `;
+  return $listItem;
 };
