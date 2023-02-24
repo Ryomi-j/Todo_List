@@ -114,8 +114,26 @@ main {
       border: none;
     }
 
-    .fullStarBtn {
-      display: none;
+    .importantContainer {
+      .importantBtn {
+        height: 100%;
+        &.active {
+          .filledStar{
+            display: block;
+          }
+
+          .emptyStar {
+            display: none;
+          }
+        }
+
+
+        .filledStar {
+          display: none;
+          margin-top: .2rem;
+        }
+      }
     }
+
   }
 }

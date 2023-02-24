@@ -43,9 +43,9 @@ import { makeDOM } from '../utils/dom.js';
 // };
 
 export const createTodoElement = (item) => {
-  const { id, content, completed, marker } = item;
+  const { id, content, completed, important } = item;
   const isDone = completed ? 'checked' : '';
-  const isImportant = marker ? 'active' : '';
+  const isImportant = important ? 'active' : '';
   const $listItem = makeDOM('div', {
     className: 'item',
   });
@@ -62,7 +62,7 @@ export const createTodoElement = (item) => {
         </div>
         <div class="btnsContainer">
           <div class='importantContainer'>
-            <button class="StarBtn">
+            <button class="importantBtn ${isImportant}">
               <img src='public/assets/imgs/filledStar.svg' class='filledStar'/>
               <img src="public/assets/imgs/emptyStar.svg" class='emptyStar'>   
             </button>

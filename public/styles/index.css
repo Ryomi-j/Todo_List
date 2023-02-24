@@ -100,6 +100,16 @@ main .pagination::before {
   background-color: transparent;
   border: none;
 }
-.item .btnsContainer .fullStarBtn {
+.item .btnsContainer .importantContainer .importantBtn {
+  height: 100%;
+}
+.item .btnsContainer .importantContainer .importantBtn.active .filledStar {
+  display: block;
+}
+.item .btnsContainer .importantContainer .importantBtn.active .emptyStar {
   display: none;
+}
+.item .btnsContainer .importantContainer .importantBtn .filledStar {
+  display: none;
+  margin-top: 0.2rem;
 }/*# sourceMappingURL=index.css.map */
