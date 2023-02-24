@@ -8,18 +8,18 @@
     },
     {
       "content": "테스트2",
-      "completed": false,
-      "id": 3,
+      "completed": true,
+      "id": 2,
       "marker": false
     },
     {
       "content": "테스트 3",
-      "completed": false,
+      "completed": true,
       "id": 3,
       "marker": false
     },
     {
-      "content": "안녕하세요",
+      "content": "테스트5",
       "completed": false,
       "id": 4
     }

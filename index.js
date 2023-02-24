@@ -1,6 +1,8 @@
-import { getList } from './module/fetch.js';
+import { getList } from './module/getList.js';
 import { getDOM } from './utils/dom.js';
-import {addListItem} from './module/addListItem.js';
+import { addListItem } from './module/addListItem.js';
+import { LIST_CONTAINER } from './constants/constants.js';
+import { toggleListItem } from './module/toggleListItem.js';
 
 const $form = getDOM('form');
 
@@ -8,7 +10,8 @@ const init = () => {
   window.addEventListener('DOMContentLoaded', () => {
     getList();
   });
-  $form.addEventListener('submit', addListItem);
+  $form.addEventListener('submit', addListItem)
+  LIST_CONTAINER.addEventListener('click', toggleListItem);
 };
 
 init();
