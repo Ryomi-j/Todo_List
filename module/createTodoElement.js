@@ -57,16 +57,14 @@ export const createTodoElement = (item) => {
             class='todo_checkbox' 
             ${isDone}
           />
-          <label>${content}</label>
+          <label class="content">${content}</label>
           <input type="text" value="${content}" class='todoInput'/>
         </div>
         <div class="btnsContainer">
           <div class='importantContainer'>
-            <button class="fullStarBtn">
-              <img src='public/assets/imgs/filledStar.svg' />
-            </button>
-            <button class="emptyStarBtn">
-              <img src="public/assets/imgs/emptyStar.svg">   
+            <button class="StarBtn">
+              <img src='public/assets/imgs/filledStar.svg' class='filledStar'/>
+              <img src="public/assets/imgs/emptyStar.svg" class='emptyStar'>   
             </button>
           </div>
           <div class="removeContainer">

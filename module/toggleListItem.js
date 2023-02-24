@@ -7,7 +7,6 @@ export const toggleListItem = (e) => {
   const $item = e.target.closest('.item');
   const id = $item.dataset.id;
   const completed = e.target.checked;
-  console.log(completed);
 
   fetch(`${API_URL}/${id}`, {
     method: 'PATCH',
