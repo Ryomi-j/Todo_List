@@ -5,6 +5,7 @@ import { LIST_CONTAINER } from './constants/constants.js';
 import { toggleListItem } from './module/toggleListItem.js';
 import { editInputContent } from './module/editInputContent.js';
 import { editInputContentConfirm } from './module/editInputContentConfirm.js';
+import { deleteInputContent } from './module/deleteInputContent.js';
 
 const $form = getDOM('form');
 
@@ -17,6 +18,7 @@ const init = () => {
   LIST_CONTAINER.addEventListener('click', editInputContent);
   LIST_CONTAINER.addEventListener('keydown', editInputContent);
   LIST_CONTAINER.addEventListener('keydown', editInputContentConfirm);
+  LIST_CONTAINER.addEventListener('click', deleteInputContent);
 };
 
 init();
