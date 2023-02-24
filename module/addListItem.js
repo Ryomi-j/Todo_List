@@ -1,6 +1,6 @@
 import { API_URL } from '../constants/constants.js';
 import { getDOM } from '../utils/dom.js';
-import { getList } from './fetch.js';
+import { getList } from './getList.js';
 
 const $todo_input = getDOM('.todo_input');
 
@@ -16,10 +16,10 @@ export const addListItem = (e) => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(item),
   })
-  .then(getList)
-  .then(() => {
-    $todo_input.value = ""
-    $todo_input.focus()
-  })
-  .catch((err) => console.err(err.message))
+    .then(getList)
+    .then(() => {
+      $todo_input.value = '';
+      $todo_input.focus();
+    })
+    .catch((err) => console.error(err.message));
 };
