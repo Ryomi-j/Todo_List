@@ -84,23 +84,30 @@ main {
   }
 }
 
-
-
 .item {
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
   margin-bottom: 1rem;
 
+  .todoContainer {
+    display: flex;
+    gap: 0.5rem;
+    width: 95%;
 
-  .todoContainer{
     label {
       color: whitesmoke;
-      width: 10rem;
     }
-  
+
     .todoInput {
       display: none;
+      width: 95%;
+      background-color: lightgray;
+      border-radius: 0.5rem;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 
@@ -118,7 +125,7 @@ main {
       .importantBtn {
         height: 100%;
         &.active {
-          .filledStar{
+          .filledStar {
             display: block;
           }
 
@@ -127,13 +134,11 @@ main {
           }
         }
 
-
         .filledStar {
           display: none;
-          margin-top: .2rem;
+          margin-top: 0.2rem;
         }
       }
     }
-
   }
 }

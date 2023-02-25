@@ -84,12 +84,22 @@ main .pagination::before {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+.item .todoContainer {
+  display: flex;
+  gap: 0.5rem;
+  width: 95%;
+}
 .item .todoContainer label {
   color: whitesmoke;
-  width: 10rem;
 }
 .item .todoContainer .todoInput {
   display: none;
+  width: 95%;
+  background-color: lightgray;
+  border-radius: 0.5rem;
+}
+.item .todoContainer .todoInput:focus {
+  outline: none;
 }
 .item .btnsContainer {
   display: flex;
