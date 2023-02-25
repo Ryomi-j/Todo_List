@@ -8,3 +8,6 @@ npm install -g json-server
 
 JSON 서버 시작
 json-server --watch db.json
+
+관련 자료
+https://github.com/typicode/json-server
