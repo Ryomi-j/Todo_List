@@ -8,7 +8,7 @@ export const markImportantInputContent = (e) => {
   } else if (e.target.parentElement.tagName === 'BUTTON') {
     target = e.target.parentNode;
   }
-  if (!target.classList.contains('importantBtn')) return;
+  if (target.classList === undefined || !target.classList.contains('importantBtn')) return;
   const $item = target.closest('.item');
   const id = $item.dataset.id;
   const important = !target.classList.contains('active');

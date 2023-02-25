@@ -3,16 +3,17 @@ import { getList } from './getList.js';
 
 // 체크박스 상태에 따라 completed의 상태를 T/F로 바꿔주는 함수
 export const toggleListItem = (e) => {
-  if (e.target.className !== 'todo_checkbox') return;
+  if (e.target.className !== 'isDone') return;
   const $item = e.target.closest('.item');
   const id = $item.dataset.id;
-  const completed = e.target.checked;
+  const completed = e.target.id !== "O"
 
   fetch(`${API_URL}/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ completed }),
   })
+    .then((response) => response.json())
     .then(getList)
     .catch((err) => console.err(err.message));
 };

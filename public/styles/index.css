@@ -2,6 +2,10 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+body button {
+  background-color: transparent;
+  border: none;
+}
 
 .wrapper {
   width: 40rem;
@@ -88,20 +92,33 @@ main .pagination::before {
 .item .todoContainer {
   display: flex;
   gap: 0.5rem;
-  width: 95%;
+  width: 90%;
 }
-.item .todoContainer label {
+.item .todoContainer .isDone {
+  background: url(../assets/imgs/emptyCheckMark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.4rem;
+}
+.item .todoContainer .isDone#O {
+  background-image: url(../assets/imgs/filledCheckdMark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.item .todoContainer .content {
   color: whitesmoke;
-  width: 92%;
+  width: 28rem;
   height: 1.5rem;
-  line-height: 1.2;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-align: left;
+  padding-top: 0.1rem;
 }
 .item .todoContainer .todoInput {
   display: none;
-  width: 95%;
+  width: 28rem;
+  height: 1.5rem;
   background-color: lightgray;
   border-radius: 0.5rem;
 }
@@ -110,38 +127,29 @@ main .pagination::before {
 }
 .item .btnsContainer {
   display: flex;
+  justify-content: space-between;
   width: 3rem;
-  justify-content: flex-end;
-  height: inherit;
-}
-.item .btnsContainer button {
-  background-color: transparent;
-  border: none;
-  padding-top: 0.2rem;
+  height: 1.5rem;
 }
 .item .btnsContainer .importantContainer .importantBtn {
-  position: relative;
   padding: 0;
+  background-image: url(../assets/imgs/emptyStar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1.3rem;
+  height: 1.3rem;
 }
-.item .btnsContainer .importantContainer .importantBtn img {
-  position: absolute;
-  top: -1rem;
-  left: -1rem;
+.item .btnsContainer .importantContainer .importantBtn.active {
+  background: url(../assets/imgs/filledStar.svg);
+  background-repeat: no-repeat;
 }
-.item .btnsContainer .importantContainer .importantBtn.active .filledStar {
-  display: block;
-}
-.item .btnsContainer .importantContainer .importantBtn.active .emptyStar {
-  display: none;
-}
-.item .btnsContainer .importantContainer .importantBtn .filledStar {
-  display: none;
-}
-.item .btnsContainer .removeContainer {
+.item .removeContainer {
   position: relative;
 }
-.item .btnsContainer .removeContainer .removeBtn {
-  display: flex;
-  margin-top: 0.1rem;
-  margin-left: 0.2rem;
+.item .removeContainer .removeBtn {
+  background: url(../assets/imgs/trash.svg);
+  background-repeat: no-repeat;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-position: center;
 }/*# sourceMappingURL=index.css.map */

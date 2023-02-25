@@ -1,6 +1,11 @@
 body {
   width: 100%;
   margin: 0 auto;
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
 }
 
 .wrapper {
@@ -96,36 +101,33 @@ main {
     gap: 0.5rem;
     width: 90%;
 
-    .todo_checkbox_input {
-      display: none;
-    }
-
-    .todo_checkbox {
-      background-image: url(../assets/imgs/emptyCheckMark.svg);
+    .isDone {
+      background: url(../assets/imgs/emptyCheckMark.svg);
       background-repeat: no-repeat;
       background-position: center;
       width: 1.4rem;
 
-      &.checked {
-        background: url(../assets/imgs/filledCheckdMark.svg);
+      &#O {
+        background-image: url(../assets/imgs/filledCheckdMark.svg);
         background-repeat: no-repeat;
         background-position: center;
       }
     }
 
-    label {
+    .content {
       color: whitesmoke;
-      width: 92%;
+      width: 28rem;
       height: 1.5rem;
-      line-height: 1.2;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
+      text-align: left;
+      padding-top: .1rem;
     }
 
     .todoInput {
       display: none;
-      width: 95%;
+      width: 28rem;
       height: 1.5rem;
       background-color: lightgray;
       border-radius: 0.5rem;
@@ -141,12 +143,6 @@ main {
     justify-content: space-between;
     width: 3rem;
     height: 1.5rem;
-
-    button {
-      background-color: transparent;
-      border: none;
-      padding-top: 0.2rem;
-    }
 
     .importantContainer {
       .importantBtn {
