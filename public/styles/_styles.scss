@@ -87,8 +87,9 @@ main {
 .item {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2rem;
+  align-items: center;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 
   .todoContainer {
     display: flex;
@@ -113,17 +114,26 @@ main {
 
   .btnsContainer {
     display: flex;
-    width: 4rem;
+    width: 3rem;
     justify-content: flex-end;
+    height: inherit;
 
     button {
       background-color: transparent;
       border: none;
+      padding-top: 0.2rem;
     }
 
     .importantContainer {
       .importantBtn {
-        height: 100%;
+        position: relative;
+        padding: 0;
+
+        img {
+          position: absolute;
+          top: -1rem;
+          left: -1rem;
+        }
         &.active {
           .filledStar {
             display: block;
@@ -136,8 +146,16 @@ main {
 
         .filledStar {
           display: none;
-          margin-top: 0.2rem;
         }
+      }
+    }
+
+    .removeContainer {
+      position: relative;
+      .removeBtn {
+        display: flex;
+        margin-top: 0.1rem;
+        margin-left: 0.2rem;
       }
     }
   }
