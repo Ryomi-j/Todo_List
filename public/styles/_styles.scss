@@ -98,6 +98,14 @@ main {
 
     label {
       color: whitesmoke;
+      width: 92%;
+      height: 1.5rem;
+      line-height: 1.2;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+
     }
 
     .todoInput {
