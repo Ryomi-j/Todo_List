@@ -7,12 +7,14 @@ import { editInputContent } from './module/editInputContent.js';
 import { editInputContentConfirm } from './module/editInputContentConfirm.js';
 import { deleteInputContent } from './module/deleteInputContent.js';
 import { markImportantInputContent } from './module/markImportantInputContent.js';
+import { pagination } from './module/pagination.js';
 
 const $form = getDOM('form');
 
 const init = () => {
   window.addEventListener('DOMContentLoaded', () => {
     getList();
+    pagination();
   });
   $form.addEventListener('submit', addListItem);
   LIST_CONTAINER.addEventListener('click', toggleListItem);
