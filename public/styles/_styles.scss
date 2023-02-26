@@ -1,10 +1,10 @@
 body {
-  width: 100%;
+  width: $percent-100 ;
   margin: 0 auto;
 
   button {
     background-color: transparent;
-    background-size: 100%;
+    background-size: $percent-100 ;
     border: none;
     padding: 0;
   }
@@ -23,21 +23,21 @@ header {
   margin-top: .5rem;
   padding: 4rem 3rem 0;
   padding-bottom: 0;
-  width: 100%;
+  width: $percent-100 ;
   height: 19rem;
-  background-color: #1e1f25;
-  color: rgb(240, 239, 239);
+  background-color: $color-black-400;
+  color: $color-gray-100;
   &::after {
     content: '';
     display: block;
-    width: 100%;
+    width: $percent-100 ;
     height: 0.3rem;
     margin-top: 0.4rem;
-    background-color: #333333;
+    background-color: $color-black-300;
   }
 
   .title {
-    width: 100%;
+    width: $percent-100 ;
     background-color: transparent;
     font-size: 56px;
     font-weight: 900;
@@ -47,9 +47,9 @@ header {
 
   .titleInput {
     display: none;
-    width: 100%;
+    width: $percent-100 ;
     height: 3.5rem;
-    background-color: lightgray;
+    background-color: $color-gray-100;
     font-size: 56px;
     font-weight: 900;
   }
@@ -78,10 +78,10 @@ main {
   position: relative;
   margin: 0 auto;
   padding: 1rem 3rem;
-  width: 100%;
+  width: $percent-100 ;
   height: 70vh;
   min-height: 60vh;
-  background-color: #333333;
+  background-color: $color-black-300;
 }
 
 .item {
@@ -100,7 +100,7 @@ main {
       background: url(../assets/imgs/emptyCheckMark.svg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 100%;
+      background-size: $percent-100 ;
       width: 1.4rem;
 
       &#O {
@@ -111,7 +111,7 @@ main {
     }
 
     .content {
-      color: whitesmoke;
+      color: $color-gray-100;
       width: 28rem;
       height: 1.5rem;
       text-overflow: ellipsis;
@@ -125,7 +125,7 @@ main {
       display: none;
       width: 28rem;
       height: 1.5rem;
-      background-color: lightgray;
+      background-color: $color-gray-100;
       border-radius: 0.5rem;
 
       &:focus {
@@ -146,7 +146,7 @@ main {
         background-image: url(../assets/imgs/emptyStar.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 100%;
+        background-size: $percent-100 ;
 
         width: 1.3rem;
         height: 1.3rem;
@@ -154,7 +154,7 @@ main {
         &.active {
           background: url(../assets/imgs/filledStar.svg);
           background-repeat: no-repeat;
-          background-size: 100%;
+          background-size: $percent-100 ;
         }
       }
     }
@@ -166,7 +166,7 @@ main {
       background: url(../assets/imgs/trash.svg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 100%;
+      background-size: $percent-100 ;
       width: 1.3rem;
       height: 1.3rem;
     }
@@ -184,7 +184,7 @@ main {
   height: 2rem;
 
   button {
-    color: whitesmoke;
+    color: $color-gray-100;
     font-weight: 700;
     font-size: 1.4rem;
   }
@@ -193,9 +193,9 @@ main {
     content: '';
     position: absolute;
     top: 0rem;
-    width: 100%;
+    width: $percent-100 ;
     height: 0.3rem;
     margin-top: -1.2rem;
-    background-color: #1e1f25;
+    background-color: $color-black-400;
   }
 }
