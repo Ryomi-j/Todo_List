@@ -4,6 +4,7 @@ body {
 }
 body button {
   background-color: transparent;
+  background-size: 100%;
   border: none;
   padding: 0;
 }
@@ -93,6 +94,7 @@ main {
   background: url(../assets/imgs/emptyCheckMark.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
   width: 1.4rem;
 }
 .item .todoContainer .isDone#O {
@@ -131,12 +133,14 @@ main {
   background-image: url(../assets/imgs/emptyStar.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
   width: 1.3rem;
   height: 1.3rem;
 }
 .item .btnsContainer .importantContainer .importantBtn.active {
   background: url(../assets/imgs/filledStar.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 .item .removeContainer {
   position: relative;
@@ -144,9 +148,10 @@ main {
 .item .removeContainer .removeBtn {
   background: url(../assets/imgs/trash.svg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
   width: 1.3rem;
   height: 1.3rem;
-  background-position: center;
 }
 
 .pagination {
