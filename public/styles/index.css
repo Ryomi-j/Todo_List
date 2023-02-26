@@ -102,6 +102,10 @@ main {
   background-repeat: no-repeat;
   background-position: center;
 }
+.item .todoContainer .isDone#O + button .content {
+  color: rgb(124, 124, 124);
+  text-decoration: line-through;
+}
 .item .todoContainer .content {
   color: rgb(240, 239, 239);
   width: 28rem;

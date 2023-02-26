@@ -107,6 +107,11 @@ main {
         background-image: url(../assets/imgs/filledCheckdMark.svg);
         background-repeat: no-repeat;
         background-position: center;
+
+        & + button .content {
+          color: $color-gray-600;
+          text-decoration: line-through;
+        }
       }
     }
 
