@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
 }
 body button {
@@ -11,15 +12,13 @@ body button {
 
 .wrapper {
   width: 40rem;
-  margin: 1rem auto;
-  position: relative;
-  width: 40rem;
   height: 100vh;
-  min-height: 60rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+  position: relative;
 }
 
 header {
-  margin-top: 0.5rem;
   padding: 4rem 3rem 0;
   padding-bottom: 0;
   width: 100%;
@@ -73,8 +72,7 @@ main {
   margin: 0 auto;
   padding: 1rem 3rem;
   width: 100%;
-  height: 70vh;
-  min-height: 60vh;
+  height: 45vh;
   background-color: #333333;
 }
 
@@ -181,4 +179,4 @@ main {
   height: 0.3rem;
   margin-top: -1.2rem;
   background-color: #1e1f25;
-}/*# sourceMappingURL=index.css.map */
+}
