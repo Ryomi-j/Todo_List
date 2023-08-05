@@ -1,5 +1,5 @@
 import { getAllDOM, getDOM } from '../utils/dom.js';
-import { getList, getListLength } from './getList.js';
+import { renderList, getListLength } from './getList.js';
 
 export let currentPage = 1;
 export const limit = 10;
@@ -49,7 +49,7 @@ export const pagination = async () => {
         currentPage = button.innerText;
       }
       pagination();
-      getList();
+      renderList();
     });
   });
 };
